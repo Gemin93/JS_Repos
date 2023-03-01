@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@500&display=swap');
+
+:root {
+  --constant-black-alpha64: rgba(0, 0, 0, 0.64);
+  --constant-black-alpha4: rgba(0, 0, 0, 0.04);
+  --constant-white-alpha12: rgba(255, 255, 255, 0.12);
+  --constant-white-alpha64: rgba(255, 255, 255, 0.64);
+  --constant-black: #262a2f;
+  --constant-black2: #1e2028;
+  --constant-white: #fff;
+  --constant-accent: #0083fc;
+  --constant-grey: #eaeaea;
+  --constant-grey2: #b5b5b5;
+  --container-width: 940px;
+  --container-padding: 16px;
+  --grid-column-width: 60px;
+  --grid-gap: 24px;
+  --background-page: var(--constant-white);
+  --background-element: var(--constant-grey);
+  --foreground-primary: var(--constant-black);
+  --skeleton-color: var(--constant-grey2);
+  --skeleton-gradient: linear-gradient(to right, transparent 0%, var(--constant-white-alpha64) 100%);
+  --mobile-menu-button: #f2f2f2;
+}
+
+*:not(svg *, * img) {
+  all: unset;
+  display: revert;
+}
+
+a {
+  cursor: pointer;
+}
+
+.--prevent-scroll {
+  overflow: hidden;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--background-page);
+  color: var(--foreground-primary);
+  font-weight: 500;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  max-width: var(--container-width);
+}
+
+.grid {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+.skeleton-gradient {
+  background-size: 200% 100%;
+  background-attachment: fixed;
+  background-image: var(--skeleton-gradient);
+  animation: skeleton-gradient-animation 1s linear infinite;
+}
+
+@keyframes skeleton-gradient-animation {
+  from {
+    background-position: 100% 0;
+  }
+
+  to {
+    background-position: -100% 0;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  :root {
+    --container-padding: 20px;
+    --grid-gap: 20px;
+  }
+
+  body {
+    min-width: calc(var(--container-width) + 2 * var(--container-padding));
+  }
+
+  .grid {
+    grid-template-columns: repeat(12, var(--grid-column-width));
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-page: var(--constant-black);
+    --background-element: var(--constant-black2);
+    --foreground-primary: var(--constant-white);
+    --skeleton-gradient: linear-gradient(to right, transparent 0%, var(--constant-white-alpha12) 100%);
+  }
+}
