@@ -4,13 +4,13 @@ import star from '../../images/star.svg';
 import './Card.css';
 
 interface Props {
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export const Card: FC<Props> = ({ onClick }) => {
   return (
-    <div className="card" onClick={onClick}>
-      <div className="container card__container">
+    <div className="card">
+      <div className="container card__container" onClick={onClick}>
         <h1 className="card__name">React</h1>
         <p className="card__description">
           A declarative, efficient, and flexible JavaScript library for building user interfaces.

@@ -1,3 +1,7 @@
-// export const apiFetchNews = (): Promise<T> => {
-//   return fetch('https://frontend.karpovcourses.net/api/v2/ru/news').then((response) => response.json());
-// };
+import { IReposInfo } from '@features/getRepos/types';
+
+export const apiFetchRepos = (): Promise<IReposInfo> => {
+  return fetch(
+    'https://api.github.com/search/repositories?q=javascript+in:topics+language:javascript&sort=stars&order=desc'
+  ).then((response) => response.json());
+};

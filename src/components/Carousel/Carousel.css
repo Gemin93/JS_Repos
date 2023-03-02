@@ -1,0 +1,32 @@
+.main-container {
+  margin-top: 100px;
+  height: 150px;
+  width: 620px;
+  display: flex;
+  align-items: center;
+}
+
+.window {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.all-pages-container {
+  height: 100%;
+  display: flex;
+  transition: transform .3s linear;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.carousel {
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+}
