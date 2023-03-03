@@ -2,22 +2,19 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IReposInfo } from '../getRepos/types';
 
 interface InitialState {
-  items: Record<number, IReposInfo>;
+  repos: IReposInfo[];
 }
 
 const initialState: InitialState = {
-  items: {},
+  repos: [],
 };
 
 export const reposSlice = createSlice({
   name: 'reposList',
   initialState,
   reducers: {
-    setRepos: (state, action: PayloadAction<IReposInfo>) => {
-      state.items = {
-        ...state.items,
-        [action.payload.id]: action.payload
-      }
+    setRepos: (state, action: PayloadAction<IReposInfo[]>) => {
+      state.repos = action.payload;
     },
   },
 });

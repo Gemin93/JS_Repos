@@ -7,6 +7,7 @@ import { Title } from '@components/Title/Title';
 import { Card } from '@components/Card/Card';
 // import { Carousel } from '@components/Carousel/Carousel';
 import './Page.css';
+import { Slider } from '@components/Slider/Slider';
 
 // import { CarouselCompound } from '@components/Carousel/Carousel';
 // import { CarouselSlide } from '@components/CarouselSlide/CarouselSlide';
@@ -34,6 +35,7 @@ export const Page: FC = () => {
 
       <Title />
       <Card onClick={() => setEmailModalShown(true)} />
+      <Slider />
       {/*<Carousel>*/}
       {/*  <div className="item item-1">item-1</div>*/}
       {/*  <div className="item item-2">item-1</div>*/}

@@ -5,13 +5,14 @@ import './Card.css';
 
 interface Props {
   onClick?: () => void;
+  name?: string;
 }
 
-export const Card: FC<Props> = ({ onClick }) => {
+export const Card: FC<Props> = ({ onClick, name }) => {
   return (
     <div className="card">
       <div className="container card__container" onClick={onClick}>
-        <h1 className="card__name">React</h1>
+        <h1 className="card__name">{name}</h1>
         <p className="card__description">
           A declarative, efficient, and flexible JavaScript library for building user interfaces.
         </p>

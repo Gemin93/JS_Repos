@@ -1,8 +1,10 @@
 import { configureStore, ThunkDispatch, ThunkAction, PayloadAction } from '@reduxjs/toolkit';
+import reposSlice from '@features/getRepos/slice';
 //импортировать редьюсер
 
 export const store = configureStore({
   reducer: {
+    reposSlice: reposSlice,
     //добавить редьюсер
   },
 });
