@@ -1,3 +1,26 @@
 .slider {
-  background-color: #eaeaea;
+  box-sizing: border-box;
+  background-color: var(--background-element);
+  margin-top: 60px;
+  width: 780px;
+  display: flex;
+  align-items: center;
+}
+
+.slider__item {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.arrow-prev {
+  margin-right: 45px;
+}
+
+.arrow-next {
+  margin-left: 45px;
 }

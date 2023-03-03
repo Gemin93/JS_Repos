@@ -38,13 +38,13 @@ export const Carousel: FC = ({ children }) => {
 
   return (
     <div className="main-container container">
-      <img src={prev} alt="prev arrow" className="arrow" onClick={handlePrevClick} />
+      <img src={prev} alt="prev arrow" className="arrow arrow-prev" onClick={handlePrevClick} />
       <div className="window">
         <div className="all-pages-container" style={{ transform: `translateX(${offset}px)` }}>
           {children}
         </div>
       </div>
-      <img src={next} alt="next arrow" className="arrow" />
+      <img src={next} alt="next arrow" className="arrow arrow-left" />
     </div>
   );
 };

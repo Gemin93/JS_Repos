@@ -1,0 +1,6 @@
+.repos-list {
+  height: 100%;
+  display: flex;
+  max-height: 217px;
+  transition: transform .3s linear;
+}

@@ -16,7 +16,7 @@ export const fetchRepos = createAsyncThunk('api/FetchRepos', (_, thunk) => {
         description: rep.description,
         homepage: rep.homepage,
         topics: rep.topics,
-        stars: rep.stars,
+        stargazers_count: rep.stargazers_count,
         forks: rep.forks,
       };
       reposList.push(repData);

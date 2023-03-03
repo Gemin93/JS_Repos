@@ -7,6 +7,6 @@ export interface IReposInfo {
   description: string;
   homepage: string;
   topics: Array<string>;
-  stars: number;
+  stargazers_count: number;
   forks: number;
 }
