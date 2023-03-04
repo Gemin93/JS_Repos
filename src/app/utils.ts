@@ -14,3 +14,9 @@ export function repeat<T>(cb: (i: number) => T, times = 1): T[] {
 
   return res;
 }
+
+export function ucFirst(str: string): string {
+  if (!str) return str;
+
+  return str[0].toUpperCase() + str.slice(1);
+}

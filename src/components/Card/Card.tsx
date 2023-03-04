@@ -1,9 +1,9 @@
 import React, { FC, useState } from 'react';
-import fork from '../../images/fork.svg';
-import star from '../../images/star.svg';
 import './Card.css';
 import { IReposInfo } from '@features/getRepos/types';
 import { Modal } from '@features/subscribeNotification/components/Modal/Modal';
+import { Fork } from '@components/Icons/Fork';
+import { Star } from '@components/Icons/Star';
 
 interface Props {
   repository: IReposInfo;
@@ -26,11 +26,15 @@ export const Card: FC<Props> = ({ repository }) => {
           <p className="card__description">{repository.description}</p>
           <div className="card__rating">
             <div className="card__rating-element">
-              <img src={star} alt="star" className="card__rating-image" />
+              <div className="card__rating-image">
+                <Star />
+              </div>
               <span className="card__rating-info">{repository.stargazers_count}</span>
             </div>
             <div className="card__rating-element">
-              <img src={fork} alt="fork" className="card__rating-image" />
+              <div className="card__rating-image">
+                <Fork />
+              </div>
               <span className="card__rating-info">{repository.forks}</span>
             </div>
           </div>

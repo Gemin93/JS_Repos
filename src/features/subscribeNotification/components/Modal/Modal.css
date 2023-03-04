@@ -1,6 +1,6 @@
 .modal {
   background: var(--background-element);
-  color: var(--constant-white);
+  color: var(--foreground-primary);
   padding: 24px 24px 50px 30px;
   position: relative;
 }
@@ -73,6 +73,7 @@
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  color: var(--constant-white);
 }
 
 .modal-card__tag-item {

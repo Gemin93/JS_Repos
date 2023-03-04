@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@500&display=swap');
 
-:root {
+:root, #overlay {
   --constant-black-alpha64: rgba(0, 0, 0, 0.64);
   --constant-black-alpha4: rgba(0, 0, 0, 0.04);
   --constant-white-alpha12: rgba(255, 255, 255, 0.12);
@@ -14,8 +14,6 @@
   --constant-grey2: #b5b5b5;
   --container-width: 940px;
   --container-padding: 16px;
-  --grid-column-width: 60px;
-  --grid-gap: 24px;
   --background-page: var(--constant-white);
   --background-element: var(--constant-grey);
   --foreground-primary: var(--constant-black);
@@ -50,11 +48,6 @@ body {
   max-width: var(--container-width);
 }
 
-.grid {
-  display: grid;
-  gap: var(--grid-gap);
-}
-
 .skeleton-gradient {
   background-size: 200% 100%;
   background-attachment: fixed;
@@ -75,20 +68,15 @@ body {
 @media all and (min-width: 1024px) {
   :root {
     --container-padding: 20px;
-    --grid-gap: 20px;
   }
 
   body {
     min-width: calc(var(--container-width) + 2 * var(--container-padding));
   }
-
-  .grid {
-    grid-template-columns: repeat(12, var(--grid-column-width));
-  }
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root, #overlay {
     --background-page: var(--constant-black);
     --background-element: var(--constant-black2);
     --foreground-primary: var(--constant-white);

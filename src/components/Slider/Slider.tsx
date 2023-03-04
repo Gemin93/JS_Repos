@@ -1,12 +1,12 @@
 import React, { useEffect, useState, FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Dispatch } from '@app/store';
-import next from '../../images/next.svg';
-import prev from '../../images/prev.svg';
 import { getRepos } from '@features/getRepos/selectors';
 import { fetchRepos } from '@features/getRepos/actions';
 import { ReposList } from '@components/ReposList/ReposList';
 import './Slider.css';
+import { ArrowPrev } from '@components/Icons/ArrowPrev';
+import { ArrowNext } from '@components/Icons/ArrowNext';
 
 export const Slider: FC = () => {
   const reposList = useSelector(getRepos);
@@ -26,11 +26,15 @@ export const Slider: FC = () => {
 
   return (
     <div className="slider container">
-      <img src={prev} alt="prevSlide" className="arrow arrow-prev" onClick={prevSlide} />
+      <div className="arrow arrow-prev" onClick={prevSlide}>
+        <ArrowPrev />
+      </div>
       <div className="slider__item">
         <ReposList sliderNumber={slide} />
       </div>
-      <img src={next} alt="nextSlide" className="arrow arrow-next" onClick={nextSlide} />
+      <div className="arrow arrow-next" onClick={nextSlide}>
+        <ArrowNext />
+      </div>
     </div>
   );
 };
