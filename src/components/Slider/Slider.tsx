@@ -11,10 +11,8 @@ import './Slider.css';
 export const Slider: FC = () => {
   const reposList = useSelector(getRepos);
   const dispatch = useDispatch<Dispatch>();
-  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setLoading(true);
-    dispatch(fetchRepos()).finally(() => setLoading(false));
+    dispatch(fetchRepos());
   }, []);
   const [slide, setSlide] = useState<number>(0);
 

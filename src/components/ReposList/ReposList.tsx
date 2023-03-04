@@ -25,16 +25,8 @@ export const ReposList: FC<ReposListProps> = ({ sliderNumber }) => {
 
   return (
     <div className="repos-list" style={{ transform: `translateX(-${sliderNumber * 100}%)` }}>
-      {reposList.map((item) => {
-        return (
-          <Card
-            key={item.id}
-            name={item.name}
-            description={item.description}
-            stars={item.stargazers_count}
-            forks={item.forks}
-          />
-        );
+      {reposList.map((rep) => {
+        return <Card key={rep.id} repository={rep} />;
       })}
     </div>
   );
