@@ -2,7 +2,7 @@
   box-sizing: border-box;
   background-color: var(--background-element);
   margin-top: 60px;
-  width: 780px;
+  max-width: 780px;
   display: flex;
   align-items: center;
 }
