@@ -13,7 +13,7 @@
   --constant-grey: #eaeaea;
   --constant-grey2: #b5b5b5;
   --container-width: 940px;
-  --container-padding: 16px;
+  --container-padding: 20px;
   --background-page: var(--constant-white);
   --background-element: var(--constant-grey);
   --foreground-primary: var(--constant-black);

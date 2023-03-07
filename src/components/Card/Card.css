@@ -34,6 +34,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   word-break: break-word;
+  max-width: 100%;
 }
 
 .card__rating {
@@ -63,4 +64,58 @@
 
 .card__rating-info .skeleton-text {
   width: 90px;
+}
+
+@media (max-width: 744px) {
+  .card__name {
+    font-size: 30px;
+    line-height: 36px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-word;
+  }
+
+  .card__description {
+    font-size: 18px;
+    line-height: 24px;
+    -webkit-line-clamp: 3;
+  }
+
+  .card__rating-element {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-height: 173px;
+  }
+  .card__container {
+    padding: 20px 0 20px;
+  }
+  .card__name {
+    font-size: 18px;
+    line-height: 21px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-word;
+  }
+
+  .card__description {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 18px;
+    -webkit-line-clamp: 4;
+  }
+
+  .card__rating-element {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 18px;
+  }
 }

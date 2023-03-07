@@ -40,7 +40,12 @@
   transform: scale(0);
 }
 
-@media all and (min-width: 1024px) {
+@media (max-width: 744px) {
+  .modal-wrapper--alignY-center {
+    align-items: unset;
+    padding-top: 0;
+  }
+
   .modal-wrapper__children {
     padding-left: 0;
     padding-right: 0;

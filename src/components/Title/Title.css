@@ -9,3 +9,21 @@
   font-weight: 700;
   margin-top: 60px;
 }
+
+@media (max-width: 744px) {
+  .title {
+    justify-content: flex-start;
+    text-align: start;
+    margin-left: 20px;
+    font-size: 40px;
+    line-height: 47px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    margin-left: 0;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}

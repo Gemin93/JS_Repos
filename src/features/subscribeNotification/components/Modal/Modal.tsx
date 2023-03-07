@@ -6,6 +6,7 @@ import { Fork } from '@components/Icons/Fork';
 import { Star } from '@components/Icons/Star';
 import { Link } from '@components/Icons/Link';
 import { ucFirst } from '@app/utils';
+import { Cross } from '@components/Icons/Cross';
 
 interface ModalProps {
   onClose: VoidFunction;
@@ -17,9 +18,11 @@ export const Modal: FC<ModalProps> = ({ onClose, shown, repository }: ModalProps
   return (
     <ModalWrapper shown={shown} onClose={onClose}>
       <div className="modal">
-        <button className="modal__close" onClick={onClose}>
-          <img src={require('../../../../images/cross.svg')} alt="Закрытие модального окна" />
-        </button>
+        <div className="modal__close">
+          <button onClick={onClose}>
+            <Cross />
+          </button>
+        </div>
         <div className="modal-card">
           <div className="container modal-card__container">
             <p className="modal-card__company">{ucFirst(repository.owner.login)}</p>

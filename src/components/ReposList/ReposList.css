@@ -4,3 +4,15 @@
   max-height: 217px;
   transition: transform .3s linear;
 }
+
+@media (max-width: 744px) {
+  .repos-list {
+    max-height: 224px;
+  }
+}
+
+@media (max-width: 600px) {
+  .repos-list {
+    max-height: 173px;
+  }
+}

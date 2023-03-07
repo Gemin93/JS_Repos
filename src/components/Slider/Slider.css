@@ -24,3 +24,35 @@
 .arrow-next {
   margin-left: 45px;
 }
+
+@media (max-width: 744px) {
+  .slider {
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 30px;
+  }
+
+  .arrow-prev {
+    margin-right: 71px;
+  }
+
+  .arrow-next {
+    margin-left: 71px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider {
+    margin-top: 24px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .arrow-prev {
+    margin-right: 20px;
+  }
+
+  .arrow-next {
+    margin-left: 20px;
+  }
+}

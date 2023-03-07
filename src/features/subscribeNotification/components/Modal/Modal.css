@@ -10,6 +10,11 @@
   cursor: pointer;
 }
 
+.modal__close svg {
+  width: 33px;
+  height: 33px;
+}
+
 .modal-card {
   margin-top: 20px;
   display: flex;
@@ -17,7 +22,7 @@
 }
 
 .modal-card__container {
-  width: 780px;
+  max-width: 780px;
   box-sizing: border-box;
   padding: 30px 20px;
   background-color: var(--background-element);
@@ -34,7 +39,7 @@
 }
 
 .modal-card__name {
-  color: var(--constant-accent);
+  color: currentColor;
   font-weight: 700;
   font-size: 40px;
   line-height: 47px;
@@ -111,3 +116,65 @@
   height: 20px;
 }
 
+@media (max-width: 744px) {
+  .modal {
+    height: 100vh;
+    padding: 50px 40px;
+  }
+
+  .modal-card__container {
+    padding: 0;
+  }
+
+  .modal__close {
+    float: unset;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+
+  .modal-card {
+    margin-top: 43px;
+  }
+
+  .modal-card__company {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .modal-card__description {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .modal-card__link-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .modal-card__tag-item {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .modal-card__rating-element {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal__close svg {
+    width: 20px;
+    height: 20px;
+  }
+  .modal-card {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .modal-card__name {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
