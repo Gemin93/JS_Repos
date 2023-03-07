@@ -3,8 +3,11 @@ import './Card.css';
 import { Fork } from '@components/Icons/Fork';
 import { Star } from '@components/Icons/Star';
 import { SkeletonText } from '@components/SkeletonText/SkeletonText';
+import { useAdaptive } from '@app/hooks';
 
 export const CardSkeleton: FC = () => {
+  const { isTablet } = useAdaptive();
+
   return (
     <>
       <div className="card">
@@ -13,7 +16,7 @@ export const CardSkeleton: FC = () => {
             <SkeletonText />
           </div>
           <div className="card__description">
-            <SkeletonText rowsCount={2} />
+            <SkeletonText rowsCount={isTablet ? 3 : 2} />
           </div>
           <div className="card__rating">
             <div className="card__rating-element">

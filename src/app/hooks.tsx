@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react';
 import throttle from 'lodash.throttle';
 
 export enum Version {
-  mobile,
+  tablet,
   desktop,
 }
 
-const getVersion = (): Version => (document.body.clientWidth < 800 ? Version.mobile : Version.desktop);
+const getVersion = (): Version => (document.body.clientWidth < 744 ? Version.tablet : Version.desktop);
 
-export const useAdaptive = (): { isMobile: boolean; isDesktop: boolean } => {
+export const useAdaptive = (): { isTablet: boolean; isDesktop: boolean } => {
   const [version, setVersion] = useState(getVersion());
   const handleResize = throttle(() => {
     setVersion(getVersion());
@@ -23,7 +23,7 @@ export const useAdaptive = (): { isMobile: boolean; isDesktop: boolean } => {
   }, []);
 
   return {
-    isMobile: version === Version.mobile,
+    isTablet: version === Version.tablet,
     isDesktop: version === Version.desktop,
   };
 };
